@@ -2,110 +2,245 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>My QR Phone Site</title>
+  <title>Scout Info</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    :root {
-      color-scheme: light dark;
-    }
-    * {
-      box-sizing: border-box;
-    }
+
+    /* Full screen beige background */
     body {
       margin: 0;
       font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-      display: flex;
-      justify-content: center;
-      padding: 16px;
-      min-height: 100vh;
+      background: #f5e9d3; /* beige */
     }
-    .page {
+
+    /* Container: fills the whole device, no borders, no rounded edges */
+    .full-container {
       width: 100%;
-      max-width: 420px; /* looks nice on phones */
-      background: rgba(15, 23, 42, 0.96);
-      border-radius: 20px;
-      padding: 20px 18px 24px;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-    }
-    h1 {
-      font-size: 1.6rem;
-      margin: 0 0 0.25rem;
-    }
-    .tagline {
-      font-size: 0.9rem;
-      color: #cbd5f5;
-      opacity: 0.9;
-      margin-bottom: 1rem;
-    }
-    h2 {
-      font-size: 1.1rem;
-      margin: 1.2rem 0 0.4rem;
-    }
-    p {
-      margin: 0.3rem 0;
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-    .photos {
-      margin-top: 0.6rem;
+      min-height: 100vh;
+      background: #f5e9d3; /* beige */
       display: flex;
       flex-direction: column;
-      gap: 12px;
     }
-    .photo-card {
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      background: rgba(15, 23, 42, 0.9);
-    }
-    .photo-card img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    .photo-caption {
-      padding: 8px 10px 10px;
-      font-size: 0.85rem;
-      color: #d1d5db;
-    }
-    .footer {
-      margin-top: 1.4rem;
-      font-size: 0.75rem;
-      opacity: 0.7;
+
+    /* Card blocks (divs). No space between them. */
+    .card {
+      background: #AC9362;      /* white card inside beige background */
+      padding-bottom: 20px;
+      color: #2f2f2f;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
+
+    /* Remove ANY space between cards */
+    .card + .card {
+      margin-top: 0;
+    }
+
+    /* Logo div (slightly taller) */
+    .card-logo {
+      padding: 0px 20px;
+    }
+
+    /* Images */
+    .content-img, .logo-img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Text blocks */
+    .card-text p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Social media */
+    .card-social {
+      padding: 0px 20px;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .social-buttons {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+    }
+
+    .social-btn {
+      flex: 1;
+      padding: 12px;
+      border-radius: 10px;
+      background: #1a73e8;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .social-btn.instagram {
+      background: #d62976;
+    }
+
   </style>
 </head>
 <body>
-  <div class="page">
-    <h1>My QR Website</h1>
-    <p class="tagline">Scan the QR code to open this page on your phone.</p>
 
-    <h2>About</h2>
+  <div class="full-container">
+
+    <!-- Logo -->
+    <div class="card card-logo" style="height:auto;">
+      <img src="images/Scout logo no-bg.png" class="logo-img" alt="Logo">
+    </div>
+
+        <!-- Text 0 -->
+    <div class="card card-text" style=" background: #AC9362;">
+      <p>
+      جمعية الكشاف التقدّمي هي حركة كشفية تربوية تهدف إلى تنمية الإنسان في كل مراحله ليصبح فردًا فاعلًا، ملتزمًا، وخادمًا لمجتمعـه. ننطلق من قيم الحرية، المسؤولية، العمل، والعدالة، ونؤمن بأن التربية الكشفية هي طريق متكامل لبناء الإنسان القادر على التغيير الإيجابي.
+
+نرافق منتسبينا عبر أربع مراحل أساسية، حيث تنمو شخصيّتهم خطوة بخطوة:
+
+      </p>
+    </div>
+
+    <!-- Image 1 -->
+    <div class="card" style=" background: #8EC3E6;">
+      <img src="images/all photo.jpg" class="content-img" alt="Section image 1">
+    </div>
+
+    <!-- Text 1 -->
+    <div class="card card-text" style=" background: #8EC3E6;">
+      <p>
+        
+١. مرحلة الأشبال (7–11 سنة)
+</p><p>
+هي البذرة الأولى في طريق النمو. يتعلّم فيها الشبل روح الفريق، الانضباط، النظافة، والاحترام. نزرع فيه الحشرية الإيجابية، حب الاكتشاف، والقدرة على العمل الجماعي ضمن بيئة مليانة مرح ونشاط.
+الشبل يبذل جهده — يتعلّم أن يكون مسؤولًا رغم صِغر سنّه.
+
+      </p>
+    </div>
+
+    <!-- Image 2 -->
+    <div class="card" style=" background: #008000;">
+      <img src="images/all photo.jpg" class="content-img" alt="Section image 2">
+    </div>
+
+    <!-- Text 2 -->
+    <div class="card card-text" style=" background: #008000;">
+      <p>
+        
+٢. مرحلة الكشافة (12–16 سنة)
+</p><p>
+المرحلة يلي يبدأ فيها الفرد يكتشف ذاته الحقيقية. يختبر المغامرة، التحدّي، والعمل ضمن الجماعة. نعلّمه مهارات الحياة، القيادة الأولى، وضع الأهداف، وتحمل المسؤولية.
+الكشّاف مستعد — يتقدم خطوة ليقود ويمارس دوره بثقة.
+
+      </p>
+    </div>
+
+    <!-- Image 3 -->
+    <div class="card" style=" background: #3A5D9C;">
+      <img src="images/all photo.jpg" class="content-img" alt="Section image 3">
+    </div>
+
+        <!-- Text 3 -->
+    <div class="card card-text" style=" background: #3A5D9C;">
+      <p>
+      
+٣. مرحلة الجوالة (17–21 سنة)
+</p><p>
+مرحلة النضج والالتزام الأعمق. هنا يصبح الجوال عنصرًا فاعلًا في المجتمع، يعمل على الخدمة العامة، التطوّع، وحمل المشاريع الهادفة. يكتسب الوعي، الصبر، والتفكير النقدي.
+الجوال خَدوم — يضع خبرته في خدمة الناس ويقود بالعمل.
+
+      </p>
+    </div>
+
+        <!-- Image 4 -->
+    <div class="card" style=" background: #FF2424;">
+      <img src="images/all photo.jpg" class="content-img" alt="Section image 3">
+    </div>
+
+        <!-- Text 4 -->
+    <div class="card card-text" style=" background: #FF2424;">
     <p>
-      This is a demo page designed for phones. Replace this text with your own
-      description, info, menu, business details, or anything you like.
-    </p>
-
-    <h2>Photos</h2>
-    <div class="photos">
-      <div class="photo-card">
-        <img src="images/real madrid.jpg" alt="Photo 1">
-        <div class="photo-caption">Caption for photo 1.</div>
-      </div>
-
-      <div class="photo-card">
-        <img src="images/photo2.jpg" alt="Photo 2">
-        <div class="photo-caption">Caption for photo 2.</div>
-      </div>
+٤. مرحلة القادة
+    </p><p>
+هنا تُصنع القدوة. القائد في الكشاف التقدّمي يُربّي، يُو  جّه، ويُرافق. هو المثال في الأخلاق والانضباط والمعرفة. يعمل لبناء فرق قوية، ويشكّل الرابط بين الأجيال الكشفية.
+القائد قدوة ومسؤول — يزرع القيم التي تبني المستقبل.
+      </p>
     </div>
 
-    <div class="footer">
-      © 2025 My QR Site
+            <!-- Image 5 -->
+    <div class="card" style=" background: #AC9362;">
+      <img src="images/all photo.jpg" class="content-img" alt="Section image 3">
     </div>
+
+        <!-- Text 5 -->
+    <div class="card card-text" style=" background: #AC9362;">
+      <p>
+    رؤيتنا    
+      </p><p>
+        نطمح لبناء جيل تقدّمي واعٍ، قادر على التفكير، الحوار، خدمة المجتمع، والدفاع عن قيم الإنسان. نؤمن بأن الكشفية ليست مجرّد نشاط، بل أسلوب حياة يرافق الإنسان أينما ذهب.
+      </p><br><p>
+        رسالتنا
+      </p><p>
+        أن نخلق مساحة آمنة، تربوية، ومتطوّرة يمرّ فيها الطفل، اليافع، الشاب، ثم القائد في رحلة متكاملة تُنضج شخصيته وتجعله شريكًا في التغيير.
+      </p><br><p>
+        قيمنا
+      </p><p>
+        الحرية – المسؤولية – الانتماء – العمل – التضامن – الخدمة
+      </p>
+    </div>
+
+<!-- Social media -->
+<div class="card card-social">
+  <div>Follow us</div>
+
+  <div class="social-buttons">
+
+    <!-- Instagram logo button -->
+    <a href="https://instagram.com/youraccount"
+       target="_blank"
+       style="
+         display:inline-flex;
+         justify-content:center;
+         align-items:center;
+         width:40px;
+         height:40px;
+         border-radius:8px;
+         padding:5px;
+       ">
+      <img src="images/Instagram_Glyph_Gradient.png"
+           alt="Instagram"
+           style="width:100%; height:100%; object-fit:contain;">
+    </a>
+
+    <!-- Example Facebook button (optional) -->
+    <a href="https://facebook.com/youraccount"
+       target="_blank"
+       style="
+         display:inline-flex;
+         justify-content:center;
+         align-items:center;
+         width:40px;
+         height:40px;
+         border-radius:8px;
+         padding:5px;
+       ">
+      <img src="images/Facebook_Logo_Primary.png"
+           alt="Facebook"
+           style="width:100%; height:100%; object-fit:contain;">
+    </a>
+
   </div>
+</div>
+
+
+  </div>
+
 </body>
 </html>
