@@ -96,6 +96,27 @@
       direction:rtl;
     }
 
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  width: 100%;
+}
+
+.grid-item {
+  width: 100%;
+  height: 200px;       /* fixed height */
+  overflow: hidden;    /* hides overflowing parts of image */
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+
+
   </style>
 </head>
 <body>
@@ -137,7 +158,7 @@
 
     <!-- Image 2 -->
     <div class="card" style=" background: #008000;">
-      <img src="images/all photo.jpg" class="content-img" alt="Section image 2">
+      <img src="images/ashbal.jpg" class="content-img" alt="Section image 2">
     </div>
 
     <!-- Text 2 -->
@@ -153,7 +174,7 @@
 
     <!-- Image 3 -->
     <div class="card" style=" background: #3A5D9C;">
-      <img src="images/all photo.jpg" class="content-img" alt="Section image 3">
+      <img src="images/kshefi.jpg" class="content-img" alt="Section image 3">
     </div>
 
         <!-- Text 3 -->
@@ -169,7 +190,7 @@
 
         <!-- Image 4 -->
     <div class="card" style=" background: #FF2424;">
-      <img src="images/all photo.jpg" class="content-img" alt="Section image 3">
+      <img src="images/jawele.jpg" class="content-img" alt="Section image 3">
     </div>
 
         <!-- Text 4 -->
@@ -181,11 +202,21 @@
 <b>القائد قدوة ومسؤول</b> — يزرع القيم التي تبني المستقبل.
       </p>
     </div>
+<div class="image-grid">
+  <div class="grid-item">
+    <img src="images/sha3oub.jpeg" alt="">
+  </div>
+  <div class="grid-item">
+    <img src="images/seryi.jpg" alt="">
+  </div>
+  <div class="grid-item">
+    <img src="images/tawtam.jpg" alt="">
+  </div>
+  <div class="grid-item">
+    <img src="images/t7yye.png" alt="">
+  </div>
+</div>
 
-            <!-- Image 5 -->
-    <div class="card" style=" background: #AC9362;">
-      <img src="images/all photo.jpg" class="content-img" alt="Section image 3">
-    </div>
 
         <!-- Text 5 -->
     <div class="card card-text" style=" background: #AC9362;">
@@ -246,7 +277,6 @@
 
   </div>
 </div>
-
 
   </div>
 
