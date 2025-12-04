@@ -1,284 +1,282 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>Scout Info</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
+  <head>
+    <meta charset="utf-8" />
+    <title>Scout Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      @font-face {
+        font-family: "XB Niloofar";
+        src: url("fonts/XB-Niloofar.ttf") format("truetype");
+      }
+      /* Full screen beige background */
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        background: #f5e9d3; /* beige */
+        font-family: "XB Niloofar", sans-serif;
+      }
 
-    @font-face {
-      font-family: 'XB Niloofar';
-      src: url('fonts/XB-Niloofar.ttf') format('truetype');
-    }
-    /* Full screen beige background */
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      background: #f5e9d3; /* beige */
-      font-family: 'XB Niloofar', sans-serif;
-    }
+      /* Container: fills the whole device, no borders, no rounded edges */
+      .full-container {
+        width: 100%;
+        min-height: 100vh;
+        background: #f5e9d3; /* beige */
+        display: flex;
+        flex-direction: column;
+      }
 
-    /* Container: fills the whole device, no borders, no rounded edges */
-    .full-container {
-      width: 100%;
-      min-height: 100vh;
-      background: #f5e9d3; /* beige */
-      display: flex;
-      flex-direction: column;
-    }
+      /* Card blocks (divs). No space between them. */
+      .card {
+        background: #ac9362; /* white card inside beige background */
+        padding-bottom: 20px;
+        color: #2f2f2f;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
-    /* Card blocks (divs). No space between them. */
-    .card {
-      background: #AC9362;      /* white card inside beige background */
-      padding-bottom: 20px;
-      color: #2f2f2f;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+      .mini-title{
+        color: #195D39;
+        object-position: center;
+        align-items: center;
+      }
 
-    /* Remove ANY space between cards */
-    .card + .card {
-      margin-top: 0;
-    }
+      /* Remove ANY space between cards */
+      .card + .card {
+        margin-top: 0;
+      }
 
-    /* Logo div (slightly taller) */
-    .card-logo {
-      padding: 0px 20px;
-    }
+      /* Logo div (slightly taller) */
+      .card-logo {
+        padding: 0px 20px;
+      }
 
-    /* Images */
-    .content-img, .logo-img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
+      /* Images */
+      .content-img,
+      .logo-img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
 
-    /* Text blocks */
-    .card-text p {
-      margin: 0;
-      font-size: 1rem;
-      line-height: 1.5;
-    }
+      /* Text blocks */
+      .card-text p {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
 
-    /* Social media */
-    .card-social {
-      padding: 0px 20px;
-      flex-direction: column;
-      gap: 14px;
-    }
+      /* Social media */
+      .card-social {
+        padding: 0px 20px;
+        flex-direction: column;
+        gap: 14px;
+      }
 
-    .social-buttons {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-    }
+      .social-buttons {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+      }
 
-    .social-btn {
-      flex: 1;
-      padding: 12px;
-      border-radius: 10px;
-      background: #1a73e8;
-      color: #fff;
-      text-align: center;
-      text-decoration: none;
-      font-size: 0.9rem;
-      cursor: pointer;
-    }
+      .social-btn {
+        flex: 1;
+        padding: 12px;
+        border-radius: 10px;
+        background: #1a73e8;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 0.9rem;
+        cursor: pointer;
+      }
 
-    .social-btn.instagram {
-      background: #d62976;
-    }
+      .social-btn.instagram {
+        background: #d62976;
+      }
 
-    p{
-      direction:rtl;
-    }
+      p {
+        direction: rtl;
+      }
 
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  width: 100%;
-}
+    </style>
+  </head>
+  <body>
+    <div class="full-container">
+      <!-- Logo -->
+      <div class="card card-logo" style="height: auto">
+        <img src="images/Scout logo no-bg.png" class="logo-img" alt="Logo" />
+      </div>
 
-.grid-item {
-  width: 100%;
-  height: 200px;       /* fixed height */
-  overflow: hidden;    /* hides overflowing parts of image */
-}
+      <!-- Text 0 -->
+      <div class="card card-text" style="background: #ac9362">
+        <p style="font-size: 11px;" class="mini-title">تربوية، تطوعية، غير سياسية، تأسست سنة 1968 وأجيزت سنة 1986 </p><br>
+        <p>
+          <b> جمعية الكشاف التقدّمي</b> هي حركة كشفية تربوية تهدف إلى تنمية
+          الإنسان في كل مراحله ليصبح فردًا فاعلًا، ملتزمًا، وخادمًا لمجتمعـه.
+          ننطلق من قيم الحرية، المسؤولية، العمل، والعدالة، ونؤمن بأن التربية
+          الكشفية هي طريق متكامل لبناء الإنسان القادر على التغيير الإيجابي.
+          نرافق منتسبينا عبر أربع مراحل أساسية، حيث تنمو شخصيّتهم خطوة بخطوة:
+        </p>
+      </div>
 
-.grid-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  display: block;
-}
+      <!-- Image 1 -->
+      <div class="card" style="background: #8ec3e6">
+        <img
+          src="images/all photo.jpg"
+          class="content-img"
+          alt="Section image 1"
+        />
+      </div>
 
+      <!-- Text 1 -->
+      <div class="card card-text" style="background: #8ec3e6">
+        <p style="font-size: x-large"><b> ١. مرحلة الأشبال (7–11 سنة) </b></p>
+        <p>
+          هي البذرة الأولى في طريق النمو. يتعلّم فيها الشبل روح الفريق،
+          الانضباط، النظافة، والاحترام. نزرع فيه الحشرية الإيجابية، حب الاكتشاف،
+          والقدرة على العمل الجماعي ضمن بيئة مليانة مرح ونشاط.<br />
+        </p>
+        <p><b>الشبل يبذل جهده</b> — يتعلّم أن يكون مسؤولًا رغم صِغر سنّه.</p>
+      </div>
 
+      <!-- Image 2 -->
+      <div class="card" style="background: #008000">
+        <img
+          src="images/ashbal.jpg"
+          class="content-img"
+          alt="Section image 2"
+        />
+      </div>
 
-  </style>
-</head>
-<body>
+      <!-- Text 2 -->
+      <div class="card card-text" style="background: #008000">
+        <p style="font-size: x-large"><b> ٢. مرحلة الكشافة (12–16 سنة) </b></p>
+        <p>
+          المرحلة يلي يبدأ فيها الفرد يكتشف ذاته الحقيقية. يختبر المغامرة،
+          التحدّي، والعمل ضمن الجماعة. نعلّمه مهارات الحياة، القيادة الأولى، وضع
+          الأهداف، وتحمل المسؤولية.<br />
+          <b>الكشّاف مستعد</b> — يتقدم خطوة ليقود ويمارس دوره بثقة.
+        </p>
+      </div>
 
-  <div class="full-container">
+      <!-- Image 3 -->
+      <div class="card" style="background: #3a5d9c">
+        <img
+          src="images/kshefi.jpg"
+          class="content-img"
+          alt="Section image 3"
+        />
+      </div>
 
-    <!-- Logo -->
-    <div class="card card-logo" style="height:auto;">
-      <img src="images/Scout logo no-bg.png" class="logo-img" alt="Logo">
+      <!-- Text 3 -->
+      <div class="card card-text" style="background: #3a5d9c">
+        <p style="font-size: x-large"><b> ٣. مرحلة الجوالة (17–21 سنة) </b></p>
+        <p>
+          مرحلة النضج والالتزام الأعمق. هنا يصبح الجوال عنصرًا فاعلًا في
+          المجتمع، يعمل على الخدمة العامة، التطوّع، وحمل المشاريع الهادفة. يكتسب
+          الوعي، الصبر، والتفكير.<br />
+          <b>الجوال خَدوم</b> — يضع خبرته في خدمة الناس ويقود بالعمل.
+        </p>
+      </div>
+
+      <!-- Image 4 -->
+      <div class="card" style="background: #ff2424">
+        <img
+          src="images/jawele.jpg"
+          class="content-img"
+          alt="Section image 3"
+        />
+      </div>
+
+      <!-- Text 4 -->
+      <div class="card card-text" style="background: #ff2424">
+        <p style="font-size: x-large"><b> ٤. مرحلة القادة </b></p>
+        <p>
+          هنا تُصنع القدوة. القائد في الكشاف التقدّمي يُربّي، يُو جّه، ويُرافق.
+          هو المثال في الأخلاق والانضباط والمعرفة. يعمل لبناء فرق قوية، ويشكّل
+          الرابط بين الأجيال.<br />
+          <b>القائد قدوة ومسؤول</b> — يزرع القيم التي تبني المستقبل.
+        </p>
+      </div>
+      <div class="card">
+        <img class="content-img" src="images/scout-all.jpg">
+      </div>
+
+      <!-- Text 5 -->
+      <div class="card card-text" style="background: #ac9362">
+        <p style="font-size: x-large">
+          <b>رؤيتنا</b>
+        </p>
+        <p>
+          نطمح لبناء جيل تقدّمي واعٍ، قادر على التفكير، الحوار، خدمة المجتمع،
+          والدفاع عن قيم الإنسان. نؤمن بأن الكشفية ليست مجرّد نشاط، بل أسلوب
+          حياة يرافق الإنسان أينما ذهب.
+        </p>
+        <br />
+        <p style="font-size: x-large">
+          <b>رسالتنا</b>
+        </p>
+        <p>
+          أن نخلق مساحة آمنة، تربوية، ومتطوّرة يمرّ فيها الطفل، اليافع، الشاب،
+          ثم القائد في رحلة متكاملة تُنضج شخصيته وتجعله شريكًا في التغيير.
+        </p>
+        <br />
+        <p style="font-size: x-large"><b> قيمنا </b></p>
+        <p>الحرية – المسؤولية – الانتماء – العمل – التضامن – الخدمة</p>
+      </div>
+
+      <!-- Social media -->
+      <div class="card card-social">
+        <div>Follow us</div>
+
+        <div class="social-buttons">
+          <!-- Instagram logo button -->
+          <a
+            href="https://www.instagram.com/psa.aley?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            style="
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              width: 40px;
+              height: 40px;
+              border-radius: 8px;
+              padding: 5px;
+            "
+          >
+            <img
+              src="images/Instagram_Glyph_Gradient.png"
+              alt="Instagram"
+              style="width: 100%; height: 100%; object-fit: contain"
+            />
+          </a>
+
+          <!-- Example Facebook button (optional) -->
+          <a
+            href="https://www.facebook.com/psa.aley"
+            target="_blank"
+            style="
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              width: 40px;
+              height: 40px;
+              border-radius: 8px;
+              padding: 5px;
+            "
+          >
+            <img
+              src="images/Facebook_Logo_Primary.png"
+              alt="Facebook"
+              style="width: 100%; height: 100%; object-fit: contain"
+            />
+          </a>
+        </div>
+      </div>
     </div>
-
-        <!-- Text 0 -->
-    <div class="card card-text" style=" background: #AC9362;">
-      <p>
-     <b> جمعية الكشاف التقدّمي</b> هي حركة كشفية تربوية تهدف إلى تنمية الإنسان في كل مراحله ليصبح فردًا فاعلًا، ملتزمًا، وخادمًا لمجتمعـه. ننطلق من قيم الحرية، المسؤولية، العمل، والعدالة، ونؤمن بأن التربية الكشفية هي طريق متكامل لبناء الإنسان القادر على التغيير الإيجابي.
-
-نرافق منتسبينا عبر أربع مراحل أساسية، حيث تنمو شخصيّتهم خطوة بخطوة:
-
-      </p>
-    </div>
-
-    <!-- Image 1 -->
-    <div class="card" style=" background: #8EC3E6;">
-      <img src="images/all photo.jpg" class="content-img" alt="Section image 1">
-    </div>
-
-    <!-- Text 1 -->
-    <div class="card card-text" style=" background: #8EC3E6;">
-      <p style="font-size:x-large;"><b>
-        
-١. مرحلة الأشبال (7–11 سنة)
-</b></p><p>
-هي البذرة الأولى في طريق النمو. يتعلّم فيها الشبل روح الفريق، الانضباط، النظافة، والاحترام. نزرع فيه الحشرية الإيجابية، حب الاكتشاف، والقدرة على العمل الجماعي ضمن بيئة مليانة مرح ونشاط.<br>
-</p><p>
-<b>الشبل يبذل جهده</b> — يتعلّم أن يكون مسؤولًا رغم صِغر سنّه.
-
-      </p>
-    </div>
-
-    <!-- Image 2 -->
-    <div class="card" style=" background: #008000;">
-      <img src="images/ashbal.jpg" class="content-img" alt="Section image 2">
-    </div>
-
-    <!-- Text 2 -->
-    <div class="card card-text" style=" background: #008000;">
-      <p style="font-size:x-large;"><b>      
-٢. مرحلة الكشافة (12–16 سنة)
-</b></p><p>
-المرحلة يلي يبدأ فيها الفرد يكتشف ذاته الحقيقية. يختبر المغامرة، التحدّي، والعمل ضمن الجماعة. نعلّمه مهارات الحياة، القيادة الأولى، وضع الأهداف، وتحمل المسؤولية.<br>
-<b>الكشّاف مستعد</b> — يتقدم خطوة ليقود ويمارس دوره بثقة.
-
-      </p>
-    </div>
-
-    <!-- Image 3 -->
-    <div class="card" style=" background: #3A5D9C;">
-      <img src="images/kshefi.jpg" class="content-img" alt="Section image 3">
-    </div>
-
-        <!-- Text 3 -->
-    <div class="card card-text" style=" background: #3A5D9C;">
-      <p style="font-size:x-large;"><b>    
-٣. مرحلة الجوالة (17–21 سنة)
-</b></p><p>
-مرحلة النضج والالتزام الأعمق. هنا يصبح الجوال عنصرًا فاعلًا في المجتمع، يعمل على الخدمة العامة، التطوّع، وحمل المشاريع الهادفة. يكتسب الوعي، الصبر، والتفكير.<br>
-<b>الجوال خَدوم</b> — يضع خبرته في خدمة الناس ويقود بالعمل.
-
-      </p>
-    </div>
-
-        <!-- Image 4 -->
-    <div class="card" style=" background: #FF2424;">
-      <img src="images/jawele.jpg" class="content-img" alt="Section image 3">
-    </div>
-
-        <!-- Text 4 -->
-    <div class="card card-text" style=" background: #FF2424;">
-      <p style="font-size:x-large;"><b>
-٤. مرحلة القادة
-    </b></p><p>
-هنا تُصنع القدوة. القائد في الكشاف التقدّمي يُربّي، يُو  جّه، ويُرافق. هو المثال في الأخلاق والانضباط والمعرفة. يعمل لبناء فرق قوية، ويشكّل الرابط بين الأجيال.<br>
-<b>القائد قدوة ومسؤول</b> — يزرع القيم التي تبني المستقبل.
-      </p>
-    </div>
-<div class="image-grid">
-  <div class="grid-item">
-    <img src="images/sha3oub.jpeg" alt="">
-  </div>
-  <div class="grid-item">
-    <img src="images/seryi.jpg" alt="">
-  </div>
-  <div class="grid-item">
-    <img src="images/tawtam.jpg" alt="">
-  </div>
-  <div class="grid-item">
-    <img src="images/t7yye.png" alt="">
-  </div>
-</div>
-
-
-        <!-- Text 5 -->
-    <div class="card card-text" style=" background: #AC9362;">
-      <p style="font-size:x-large">
-        <b>رؤيتنا</b>
-      </p><p>
-        نطمح لبناء جيل تقدّمي واعٍ، قادر على التفكير، الحوار، خدمة المجتمع، والدفاع عن قيم الإنسان. نؤمن بأن الكشفية ليست مجرّد نشاط، بل أسلوب حياة يرافق الإنسان أينما ذهب.
-      </p><br><p style="font-size:x-large;">
-        <b>رسالتنا</b>
-      </p><p>
-        أن نخلق مساحة آمنة، تربوية، ومتطوّرة يمرّ فيها الطفل، اليافع، الشاب، ثم القائد في رحلة متكاملة تُنضج شخصيته وتجعله شريكًا في التغيير.
-      </p><br><p style="font-size:x-large;"><b>
-        قيمنا
-      </b></p><p>
-        الحرية – المسؤولية – الانتماء – العمل – التضامن – الخدمة
-      </p>
-    </div>
-
-<!-- Social media -->
-<div class="card card-social">
-  <div>Follow us</div>
-
-  <div class="social-buttons">
-
-    <!-- Instagram logo button -->
-    <a href="https://www.instagram.com/psa.aley?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-       target="_blank"
-       style="
-         display:inline-flex;
-         justify-content:center;
-         align-items:center;
-         width:40px;
-         height:40px;
-         border-radius:8px;
-         padding:5px;
-       ">
-      <img src="images/Instagram_Glyph_Gradient.png"
-           alt="Instagram"
-           style="width:100%; height:100%; object-fit:contain;">
-    </a>
-
-    <!-- Example Facebook button (optional) -->
-    <a href="https://www.facebook.com/psa.aley"
-       target="_blank"
-       style="
-         display:inline-flex;
-         justify-content:center;
-         align-items:center;
-         width:40px;
-         height:40px;
-         border-radius:8px;
-         padding:5px;
-       ">
-      <img src="images/Facebook_Logo_Primary.png"
-           alt="Facebook"
-           style="width:100%; height:100%; object-fit:contain;">
-    </a>
-
-  </div>
-</div>
-
-  </div>
-
-</body>
+  </body>
 </html>
